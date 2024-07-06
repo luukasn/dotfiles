@@ -1,0 +1,20 @@
+import = [
+	#	"~/.config/alacritty/catppuccin-mocha.toml"
+	#	"~/.config/alacritty/catppuccin-frappe.toml"
+	#   "~/.config/alacritty/catppuccin-macchiato.toml"
+	"~/.config/alacritty/gruvbox-dark.toml"
+]
+
+[env]
+term = "xterm-256color"
+
+[font]
+size = 14
+normal = { family = "JetBrainsMono NF", style = "Regular" }
+
+[window.dimensions]
+columns = 150
+lines = 45
+
+[window.padding]
+x = 10 
