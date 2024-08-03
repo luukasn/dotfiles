@@ -1,0 +1,1 @@
+- Add folder themes/[theme_name].conf and source each theme to ./hyprland.conf
