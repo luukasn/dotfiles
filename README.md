@@ -16,6 +16,14 @@ dnf install git
 dnf install stow
 ```
 
+3. zsh
+```
+dnf install zsh
+```
+```
+chsh -s $(which zsh)
+```
+
 ## Installation
 Steps on how to install these dotfiles on your system.
 

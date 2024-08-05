@@ -14,7 +14,7 @@ compinit
 
 # Load the starship prompt:
 eval "$(starship init zsh)"
-export STARSHIP_CONFIG=~/.config/zsh/config/starship/minimal.toml
+export STARSHIP_CONFIG=~/.config/zsh/plugins/starship/config.toml
 
 # Load custom PATH directories
 export PATH="${PATH}:/home/luukas/.cargo/bin"
@@ -43,7 +43,6 @@ function config() {
 }
 
 alias nv=nvim
-alias dnf=dnf5
 
 # Open a file with cat and automatically pipe it to less
 function readfile() {
