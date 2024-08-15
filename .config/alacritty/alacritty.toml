@@ -1,17 +1,17 @@
 import = [
-    # "~/.config/alacritty/themes/catppuccin-mocha.toml"
+     "~/.config/alacritty/themes/catppuccin-mocha.toml"
 	# "~/.config/alacritty/themes/catppuccin-frappe.toml"
 	# "~/.config/alacritty/themes/catppuccin-macchiato.toml"
     # "~/.config/alacritty/themes/gruvbox-dark.toml"
 	# "~/.config/alacritty/themes/solarized-dark.toml"
-    "~/.config/alacritty/themes/onedark.toml"
+    # "~/.config/alacritty/themes/onedark.toml"
 ] 
 
 [env]
 term = "xterm-256color"
 
 [font]
-size = 14
+size = 12
 normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
 
 [window.dimensions]
