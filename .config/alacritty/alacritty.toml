@@ -14,9 +14,17 @@ term = "xterm-256color"
 size = 12
 normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
 
+[window]
+opacity = 0.8
+blur = true
+
 [window.dimensions]
 columns = 150
 lines = 45
 
 [window.padding]
-x = 10 
+x = 3
+
+[mouse]
+hide_when_typing = true
+
