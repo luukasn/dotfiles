@@ -44,7 +44,7 @@ return {
             lspconfig.dockerls.setup({
                 capabilities = capabilities
             })
-            lspconfig.docker_compose_language_service({
+            lspconfig.docker_compose_language_service.setup({
                 capabilities = capabilities
             })
 
