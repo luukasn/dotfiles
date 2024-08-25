@@ -41,6 +41,12 @@ return {
             lspconfig.tailwindcss.setup({
                 capabilities = capabilities
             })
+            lspconfig.dockerls.setup({
+                capabilities = capabilities
+            })
+            lspconfig.docker_compose_language_service({
+                capabilities = capabilities
+            })
 
             -- se: Show Explanation
             vim.keymap.set("n", "<leader>se", vim.diagnostic.open_float, {})
