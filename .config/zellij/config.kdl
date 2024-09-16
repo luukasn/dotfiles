@@ -112,7 +112,7 @@ keybinds {
     session {
         bind "Ctrl o" { SwitchToMode "Normal"; }
         bind "Ctrl s" { SwitchToMode "Scroll"; }
-        bind "d" { Detach; }
+         bind "d" { Detach; }
         bind "w" {
             LaunchOrFocusPlugin "session-manager" {
                 floating true
@@ -385,3 +385,5 @@ ui {
         rounded_corners true
     }
 }
+
+simplified_ui true
