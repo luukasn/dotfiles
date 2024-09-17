@@ -47,6 +47,9 @@ return {
             lspconfig.docker_compose_language_service.setup({
                 capabilities = capabilities
             })
+            lspconfig.pyright.setup({
+                capabilities = capabilities
+            })
 
             -- se: Show Explanation
             vim.keymap.set("n", "<leader>se", vim.diagnostic.open_float, {})
