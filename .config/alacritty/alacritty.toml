@@ -15,7 +15,7 @@ size = 14
 normal = { family = "JetBrainsMono Nerd Font", style = "Regular" }
 
 [window]
-opacity = 0.95
+opacity = 0.90
 blur = true
 
 [window.dimensions]
