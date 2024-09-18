@@ -3,4 +3,5 @@ scripts
 keys
 README.md 
 DEPENDENCIES.md
+post_installation_script.md
 .gitignore
