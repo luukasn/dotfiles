@@ -45,3 +45,5 @@ and apply configuration for them.
 
 It would download nerd fonts and move them to ~/.local/share/fonts/[FontName]/
 howto: host the fonts in this dotfiles repo or in a http server.
+
+script would also add $HOME/.local/bin to the path
