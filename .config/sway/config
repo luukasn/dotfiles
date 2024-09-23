@@ -228,11 +228,14 @@ bindsym XF86AudioMute exec wpctl set-volume @DEFAULT_AUDIO_SINK@ toggle
 bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 
+bindsym $mod+Shift+n exec swaync-client -t -sw
+
 # Set gaps
 gaps inner 6
 default_border pixel 2
 
 exec waybar
+exec swaync
 exec swaybg --mode center --image /home/luukas/Pictures/wallpapers/beach.jpg
 
 include /etc/sway/config.d/*

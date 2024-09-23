@@ -5,6 +5,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# Add directories to PATH:
+export PATH="$PATH:$HOME/.local/bin"
+
 # Tell atac where the keybindings configuration file is stored at 
 export ATAC_KEY_BINDINGS=$HOME/dotfiles/.config/atac/vim_key_bindings.toml
 

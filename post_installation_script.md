@@ -19,6 +19,7 @@ Add a video idea reference here later...
 `waybar` - a cool bar to combine with sway
 `tofi` - a simple application launcher for wayland
 `swaybg` - tool to set wallpapers on wayland
+`swaync` - notification daemon
 `brightnessctl` - tool for controlling laptop screen brightness
 
 ### Command line applications:

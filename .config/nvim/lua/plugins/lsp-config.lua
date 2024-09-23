@@ -50,6 +50,9 @@ return {
             lspconfig.pyright.setup({
                 capabilities = capabilities
             })
+            lspconfig.cssls.setup({
+                capabilities = capabilities
+            })
 
             -- se: Show Explanation
             vim.keymap.set("n", "<leader>se", vim.diagnostic.open_float, {})
