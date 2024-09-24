@@ -34,6 +34,7 @@ Add a video idea reference here later...
 `stow` - for managing dotfiles
 `fzf` - command line fuzzy finder
 `bat` - for file preview with code highlighting
+`lazygit` - tui for git
 
 #### Development stuff
 `mongodb` - database
