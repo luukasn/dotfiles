@@ -1,4 +1,5 @@
 #
+#
 # ~/.bashrc
 #
 
@@ -10,6 +11,11 @@ export PATH="$PATH:$HOME/.local/bin"
 
 # Tell atac where the keybindings configuration file is stored at 
 export ATAC_KEY_BINDINGS=$HOME/dotfiles/.config/atac/vim_key_bindings.toml
+
+# Set up fzf integration for bash
+if [ -f "$(which fzf)" ]; then
+    eval "$(fzf --bash)"
+fi
 
 # Bash sheet (cheat cheet for moving around the prompt in bash)
 bshsh() {
