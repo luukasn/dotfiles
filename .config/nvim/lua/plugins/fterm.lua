@@ -4,7 +4,7 @@ return {
         local fterm = require("FTerm")
 
         fterm.setup({
-            border = "double"
+            border = "single"
         })
 
         local lazygit = fterm:new({
