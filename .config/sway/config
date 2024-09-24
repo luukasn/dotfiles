@@ -233,9 +233,11 @@ bindsym $mod+Shift+n exec swaync-client -t -sw
 # Set gaps
 gaps inner 6
 default_border pixel 2
+client.focused "#89b4fa" "#89b4fa" "#ffffff"
+client.unfocused "#737994" "#737994" "#ffffff"
 
 exec waybar
 exec swaync
-exec swaybg --mode center --image /home/luukas/Pictures/wallpapers/beach.jpg
+exec swaybg --mode center --image /home/luukas/Pictures/wallpapers/arch-black-4k.png
 
 include /etc/sway/config.d/*
