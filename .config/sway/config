@@ -228,6 +228,8 @@ bindsym XF86AudioMute exec wpctl set-volume @DEFAULT_AUDIO_SINK@ toggle
 bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 
+bindsym $mod+Shift+s exec grim -g "$(slurp)" - | wl-copy
+
 bindsym $mod+Shift+n exec swaync-client -t -sw
 
 # Set gaps
