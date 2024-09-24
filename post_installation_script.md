@@ -21,6 +21,9 @@ Add a video idea reference here later...
 `swaybg` - tool to set wallpapers on wayland
 `swaync` - notification daemon
 `brightnessctl` - tool for controlling laptop screen brightness
+`grim`- screenshot utility for wayland
+`slurp` - utility to select a region on the screen on wayland
+`wl-clipboard` - clipboard commands such as `wl-copy` and `wl-paste` for wayland
 
 ### Command line applications:
 
