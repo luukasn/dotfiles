@@ -11,7 +11,7 @@ return {
         lazy = false,
         config = function()
             require("mason-lspconfig").setup({
-                ensure_installed = { "lua_ls", "clangd", "tsserver", "marksman" },
+                ensure_installed = { "lua_ls", "clangd", "ts_ls", "marksman" },
             })
         end,
     },
@@ -29,7 +29,7 @@ return {
             lspconfig.clangd.setup({
                 capabilities = capabilities,
             })
-            lspconfig.tsserver.setup({
+            lspconfig.ts_ls.setup({
                 capabilities = capabilities,
             })
             lspconfig.marksman.setup({
