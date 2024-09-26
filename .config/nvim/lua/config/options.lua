@@ -1,4 +1,5 @@
 vim.cmd("set relativenumber")
+vim.cmd("set splitright") -- When doing :vsplit split always to the right
 vim.cmd("color catppuccin-mocha")
 vim.cmd("TransparentEnable")
 vim.opt.expandtab = true -- Pressing TAB will insert spaces instead of TAB.
