@@ -9,6 +9,11 @@
 # Add directories to PATH:
 export PATH="$PATH:$HOME/.local/bin"
 
+# Load API keys:
+if [ -f "$HOME/dotfiles/keys/OPENAI_API_KEY" ]; then
+    export "OPENAI_API_KEY=$(cat $HOME/dotfiles/keys/OPENAI_API_KEY)"
+fi
+
 # Tell atac where the keybindings configuration file is stored at 
 export ATAC_KEY_BINDINGS=$HOME/dotfiles/.config/atac/vim_key_bindings.toml
 
