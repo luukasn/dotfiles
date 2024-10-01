@@ -10,6 +10,11 @@ Add a video idea reference here later...
 
 ## Arch linux applications needed
 
+## Essential:
+- `base-devel`: Basic tools to build Arch Linux packages.
+
+- `devtools`: Tools for Arch Linux package maintainers.
+
 ### Window managers
 
 ### Different window managers 
