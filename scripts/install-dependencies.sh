@@ -11,13 +11,13 @@ arch_linux_full_install_packages=(
     "brightnessctl" "neovim"
 )
 
-additional_packages=(
-    "linux-lts" "linux-lts-headers"
-)
-
 if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
     arch_linux_full_install_packages+=("rofi-wayland")   
 fi
+
+additional_packages=(
+    "linux-lts" "linux-lts-headers"
+)
 
 detect_package_manager
 for package in ${arch_linux_full_install_packages[@]}
