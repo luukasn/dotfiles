@@ -41,10 +41,19 @@ detect_package_manager() {
     do
         if [ -f $(which $bin) ]; then
             package_manager=$bin
-            inf "Detected package manager $bin"
+            inf "detected package manager: $bin"
             break
         fi
     done
+}
+
+update_system() {
+    inf "updating the system..."
+    if sudo pacman -Syu --noconfirm &> /dev/null ; then
+        success "system updated!"
+    else 
+        err "something went wrong while updating the system"
+    fi
 }
 
 # Function to install a package on a package manager x
@@ -62,7 +71,7 @@ install_package() {
                 if sudo pacman -S $package --noconfirm &> /dev/null ; then
                     success "package $package installed succesfully"
                 else
-                    err "Something went wrong while installing $package"
+                    err "something went wrong while installing $package"
                 fi
             fi    
         ;;
@@ -73,7 +82,7 @@ install_package() {
             sudo apt isntall $package
         ;;
         *)
-            err "Could not detect package manager, exiting..."
+            err "could not detect package manager, exiting..."
             exit 1
         ;;
     esac

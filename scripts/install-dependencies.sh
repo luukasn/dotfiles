@@ -20,6 +20,8 @@ additional_packages=(
 )
 
 detect_package_manager
+update_system
+
 for package in ${arch_linux_full_install_packages[@]}
 do
     install_package "$package"
