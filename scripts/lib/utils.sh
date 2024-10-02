@@ -8,6 +8,30 @@ detect_display_server() {
     fi
 }
 
+backup_config_recursively() {
+    ignored_files=("." ".." ".git" ".gitignore")
+    if [[ ! $1 ]]; then
+        echo "Invalid usage of backup, expected one param"
+        exit 1
+    fi
+
+    file_path=$(realpath $1)
+    for file in $(ls -a "$file_path")
+    do
+        if [[ ${ignored_files[@]} =~ $file ]]; then
+            echo "Ignored file $file found, skipping..."
+            continue
+        fi
+
+        if [[ -d "$(realpath $file)" ]]; then
+            echo "target $file is a dir"
+        else
+            echo "curr_file: $file"
+        fi
+    done
+    
+}
+
 prompt() {
     if [[ ! $1 && ! $2 ]]; then
         echo "Invalid usage of prompt, expected two params"

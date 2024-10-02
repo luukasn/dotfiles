@@ -19,6 +19,8 @@ additional_packages=(
     "linux-lts" "linux-lts-headers"
 )
 
+backup_config_recursively "$HOME/dotfiles/"
+
 detect_package_manager
 update_system
 
