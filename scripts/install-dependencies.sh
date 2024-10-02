@@ -1,40 +1,30 @@
 # Write later
 # A script which installs all the dependencies
 
-minimal_install_packages="stow gcc neovim nodejs npm fzf"
-full_install_packages="stow neovim nodejs npm fzf gcc"
+# Import the logging functions
+source ./lib/log.sh
+source ./lib/utils.sh
 
-# Function to detect which package managers are present on the current system
-detect_package_manager() {
-    for bin in pacman dnf apt
-    do
-        if [ -f $(which $bin) ]; then
-            package_manager=$bin
-            break
-        fi
-    done
-}
+arch_linux_full_install_packages=(
+    "base-devel" "devtools" "stow" "nodejs" "npm" "fzf"
+    "sway" "waybar" "swaybg" "slurp" "grim" "wl-clipboard" 
+    "brightnessctl" "neovim"
+)
 
-# Function to install a package on a package manager x
-install_package() {
-    package=$1
+additional_packages=(
+    "linux-lts" "linux-lts-headers"
+)
 
-    case "$package_manager" in
-        "pacman")
-            # Install packages, print as minimal output as possible, 
-            # do not ask for confirmation messages,
-            # redirect all output to /dev/null
-            sudo pacman -S $package --quiet --noconfirm &> /dev/null
-        ;;
-        "dnf")
-            sudo dnf install $package
-        ;;
-        "apt")
-            sudo apt isntall $package
-        ;;
-    esac
-}
+if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
+    arch_linux_full_install_packages+=("rofi-wayland")   
+fi
 
 detect_package_manager
+for package in ${arch_linux_full_install_packages[@]}
+do
+    install_package "$package"
+done
 
-echo "sudo pacman -S $minimal_install_packages"
+# TODO: prompt the user if they want to install additional packages and 
+# if they want to run the ./setup-dotfiles.sh script after this script 
+# has been executed
