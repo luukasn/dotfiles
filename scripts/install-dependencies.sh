@@ -21,7 +21,10 @@ install_package() {
 
     case "$package_manager" in
         "pacman")
-            sudo pacman -S $package
+            # Install packages, print as minimal output as possible, 
+            # do not ask for confirmation messages,
+            # redirect all output to /dev/null
+            sudo pacman -S $package --quiet --noconfirm &> /dev/null
         ;;
         "dnf")
             sudo dnf install $package
