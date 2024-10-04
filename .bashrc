@@ -1,5 +1,4 @@
 #
-#
 # ~/.bashrc
 #
 
@@ -20,10 +19,6 @@ export ATAC_KEY_BINDINGS=$HOME/dotfiles/.config/atac/vim_key_bindings.toml
 # Set up fzf integration for bash
 if [ -f "$(which fzf)" ]; then
     eval "$(fzf --bash)"
-fi
-
-if [ -f "$(which tmux)" ] && [ -z "${TMUX}" ]; then
-    exec tmux new-session -A -s ${USER} >/dev/null 2>&1
 fi
 
 # Bash sheet (cheat cheet for moving around the prompt in bash)
