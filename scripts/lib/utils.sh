@@ -73,10 +73,10 @@ detect_package_manager() {
 
 update_system() {
     inf "updating the system..."
-    if sudo pacman -Syu --noconfirm &> /dev/null ; then
+    if sudo pacman -Syu --noconfirm 1> /dev/null 2>> install_errors.log ; then
         success "system updated!"
     else 
-        err "something went wrong while updating the system"
+        err "something went wrong while updating the system, see install_errors.log"
     fi
 }
 
@@ -92,10 +92,10 @@ install_package() {
             if pacman -Q $package --quiet &> /dev/null ; then
                 inf "package $package already installed, skipping..."
             else
-                if sudo pacman -S $package --noconfirm &> /dev/null ; then
+                if sudo pacman -S $package --noconfirm 1> /dev/null 2>> install_errors.log; then
                     success "package $package installed succesfully"
                 else
-                    err "something went wrong while installing $package"
+                    err "something went wrong while installing $package, see install_errors.log"
                 fi
             fi    
         ;;
