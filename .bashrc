@@ -22,6 +22,10 @@ if [ -f "$(which fzf)" ]; then
     eval "$(fzf --bash)"
 fi
 
+if [ -f "$(which tmux)" ] && [ -z "${TMUX}" ]; then
+    exec tmux new-session -A -s ${USER} >/dev/null 2>&1
+fi
+
 # Bash sheet (cheat cheet for moving around the prompt in bash)
 bshsh() {
     echo "====== BASH MOVEMENT CHEAT SHEET ======"
