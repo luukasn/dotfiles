@@ -39,40 +39,40 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 
 -- Replace word under cursor with the word returned from the prompt
 vim.keymap.set("n", "<leader>raw", function()
-	local word_under_cursor = vim.fn.expand("<cword>")
-	local to_replace_with = vim.fn.input(string.format("Replace word '%s' with (q to cancel): ", word_under_cursor))
+    local word_under_cursor = vim.fn.expand("<cword>")
+    local to_replace_with = vim.fn.input(string.format("Replace word '%s' with (q to cancel): ", word_under_cursor))
 
-	if to_replace_with == "q" then
-		vim.print("Operation cancelled...")
-	else
-		vim.cmd("%s/" .. string.format("%s/%s", word_under_cursor, to_replace_with))
-		vim.print(
-			string.format("All occurances of string '%s' has been changed to '%s'", word_under_cursor, to_replace_with)
-		)
-	end
+    if to_replace_with == "q" then
+        vim.print("Operation cancelled...")
+    else
+        vim.cmd("%s/" .. string.format("%s/%s", word_under_cursor, to_replace_with))
+        vim.print(
+            string.format("All occurances of string '%s' has been changed to '%s'", word_under_cursor, to_replace_with)
+        )
+    end
 end)
 
 -- Format the current buffer (if a valid formatter is attached to the buffer
 vim.keymap.set("n", "<leader>gf", function()
-	require("conform").format({
-		lsp_fallback = true,
-		timeout_ms = 500,
-		async = false,
-	})
+    require("conform").format({
+        lsp_fallback = true,
+        timeout_ms = 500,
+        async = false,
+    })
 end)
 
 -- Map the keys for moving in between the luasnip inputs
 -- Move forward
 local luasnip = require("luasnip")
 vim.keymap.set({ "i", "s" }, "<C-l>", function()
-	if luasnip.expand_or_jumpable() then
-		luasnip.expand_or_jump()
-	end
+    if luasnip.expand_or_jumpable() then
+        luasnip.expand_or_jump()
+    end
 end, { silent = true })
 
 -- Move backwards
 vim.keymap.set({ "i", "s" }, "<C-k>", function()
-	if luasnip.jumpable(-1) then
-		luasnip.jump(-1)
-	end
+    if luasnip.jumpable(-1) then
+        luasnip.jump(-1)
+    end
 end, { silent = true })
