@@ -8,7 +8,7 @@ source ./lib/utils.sh
 arch_linux_full_install_packages=(
     "base-devel" "devtools" "stow" "nodejs" "npm" "fzf"
     "sway" "waybar" "swaybg" "slurp" "grim" "wl-clipboard" 
-    "brightnessctl" "neovim"
+    "brightnessctl" "ttf-jetbrains-mono-nerd" "neovim"
 )
 
 if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
