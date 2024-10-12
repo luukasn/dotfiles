@@ -103,7 +103,7 @@ return {
                     },
                 }),
                 experimental = {
-                    ghost_text = true,
+                    ghost_text = false,
                 },
                 formatting = {
                     format = require("lspkind").cmp_format({
