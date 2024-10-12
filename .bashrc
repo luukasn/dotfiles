@@ -21,6 +21,10 @@ if [ -f "$(which fzf)" ]; then
     eval "$(fzf --bash)"
 fi
 
+if [ -f "$(which starship)" ]; then
+    eval "$(starship init bash)"
+fi
+
 # Bash sheet (cheat cheet for moving around the prompt in bash)
 bshsh() {
     echo "====== BASH MOVEMENT CHEAT SHEET ======"
