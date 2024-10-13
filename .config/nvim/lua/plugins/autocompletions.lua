@@ -37,6 +37,11 @@ return {
                     and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
             end
 
+            local borders = {
+                minimal = { "┌", "─", "┐", "│", "┘", "─", "└", "│" },
+                bottom = { "", "", "", "", "", "─", "", "" }
+            }
+
             cmp.setup({
                 snippet = {
                     -- REQUIRED - you must specify a snippet engine
@@ -48,8 +53,11 @@ return {
                     end,
                 },
                 window = {
-                    completion = cmp.config.window.bordered({ border = "shadow" }),
-                    documentation = cmp.config.window.bordered({ border = "shadow" }),
+                    completion = cmp.config.window.bordered({
+                        border = borders.minimal,
+                        side_padding = 0,
+                    }),
+                    documentation = cmp.config.window.bordered({ border = borders.minimal }),
                 },
                 mapping = cmp.mapping.preset.insert({
                     ["<C-k>"] = cmp.mapping.scroll_docs(-4),
@@ -90,18 +98,28 @@ return {
                 end),
                 -- Configure which sources the completion comes from
                 sources = cmp.config.sources({
-                    { name = "nvim_lsp" }, -- Accept sources from the nvip lsp client.
-                    { name = "luasnip" },  -- For luasnip users.
-                    { name = "buffer" },
-                    { name = "path" },
-                }, {
-                    {
-                        name = "buffer",
-                        options = {
-                            keyword_length = 4,
-                        },
+                        { name = "nvim_lsp" }, -- Accept sources from the nvip lsp client.
+                        { name = "luasnip" },  -- For luasnip users.
+                        { name = "buffer" },
+                        { name = "path" },
                     },
-                }),
+                    {
+                        {
+                            name = "buffer",
+                            options = {
+                                keyword_length = 4,
+                            },
+                        },
+                    }),
+                sorting = {
+                    comparators = {
+                        cmp.config.compare.offset,
+                        cmp.config.compare.exact,
+                        cmp.config.compare.score,
+                        cmp.config.compare.recently_used,
+                        cmp.config.compare.locality
+                    }
+                },
                 experimental = {
                     ghost_text = false,
                 },
