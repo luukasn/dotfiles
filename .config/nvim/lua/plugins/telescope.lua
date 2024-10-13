@@ -3,6 +3,7 @@
 return {
     {
         "nvim-telescope/telescope.nvim",
+        lazy = true,
         tag = "0.1.5",
         dependencies = { "nvim-lua/plenary.nvim" }, -- This is a dependency which just provides API functions for the lua runtime in neovim
         config = function()

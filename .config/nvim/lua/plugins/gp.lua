@@ -1,5 +1,6 @@
 return {
     "robitx/gp.nvim",
+    lazy = true,
     config = function()
         local custom_prompts = {
             code_assistant = "You are an AI assistant for a programmer\n\n"

@@ -20,7 +20,6 @@ return {
     },
     {
         "onsails/lspkind.nvim", -- VS-code like UI for the cmp autosuggestion engine
-        lazy = false,
     },
     {
         "hrsh7th/nvim-cmp",
