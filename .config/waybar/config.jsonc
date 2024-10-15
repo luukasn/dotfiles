@@ -61,6 +61,11 @@
             "unlocked": ""
         }
     },
+    "sway/window": {
+        "format": "{title}",
+        "icon": true,
+        "max-length": 50,
+    },
     "sway/mode": {
         "format": "<span style=\"italic\">{}</span>"
     },

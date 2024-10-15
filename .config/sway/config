@@ -239,8 +239,8 @@ bindsym $mod+Shift+n exec swaync-client -t -sw
 
 # Set gaps
 gaps inner 6
-default_border pixel 2
-client.focused "#89b4fa" "#89b4fa" "#ffffff"
+default_border pixel 3
+client.focused "#f38ba8" "#f38ba8" "#ffffff"
 client.unfocused "#737994" "#737994" "#ffffff"
 
 exec waybar
