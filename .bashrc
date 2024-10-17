@@ -36,7 +36,7 @@ bshsh() {
 }
 
 # Source all the aliases from the alias file
-source ./.config/bash/aliases.sh
+source $HOME/.config/bash/aliases.sh
 
 fastfetch
 
