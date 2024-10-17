@@ -35,6 +35,9 @@ bshsh() {
     echo "Ctrl + E : Move to the end of the prompt"
 }
 
+# Source all the aliases from the alias file
+source ./.config/bash/aliases.sh
+
 fastfetch
 
 alias ls='ls --color=auto'
