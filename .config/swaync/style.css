@@ -1,5 +1,5 @@
-@define-color cc-bg rgba(26, 27, 38, 1);
-@define-color noti-border-color rgba(255, 255, 255, 0.15);
+@define-color cc-bg rgba(30, 30, 46, 1);
+@define-color noti-border-color rgba(243, 139, 168, 0.15);
 @define-color noti-bg rgb(17, 17, 27);
 @define-color noti-bg-darker rgb(43, 43, 57);
 @define-color noti-bg-hover rgb(27, 27, 43);
@@ -273,7 +273,7 @@
 }
 
 .widget-buttons-grid > flowbox > flowboxchild > button:hover {
-  background: rgba(122, 162, 247, 1);
+  background: rgba(203, 166, 247, 1);
   color: @cc-bg;
 }
 
