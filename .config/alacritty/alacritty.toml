@@ -11,8 +11,8 @@ opacity = 0.90
 blur = true
 
 [window.dimensions]
-columns = 145
-lines = 36
+columns = 120
+lines = 32
 
 [window.padding]
 x = 3
