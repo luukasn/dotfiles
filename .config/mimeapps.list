@@ -27,8 +27,8 @@ text/x-cmake=nvim.desktop;
 video/mp4=vlc.desktop;
 video/x-matroska=vlc-2.desktop;vlc.desktop;
 x-scheme-handler/discord-523502837364424706=discord-523502837364424706.desktop;
-x-scheme-handler/http=firefox.desktop;
-x-scheme-handler/https=firefox.desktop;
+x-scheme-handler/http=mullvad-browser.desktop;firefox.desktop;
+x-scheme-handler/https=mullvad-browser.desktop;firefox.desktop;
 
 [Default Applications]
 application/json=nvim.desktop;
@@ -60,7 +60,9 @@ video/x-matroska=vlc-2.desktop;
 x-scheme-handler/discord-409416265891971072=discord-409416265891971072.desktop
 x-scheme-handler/discord-523502837364424706=discord-523502837364424706.desktop
 x-scheme-handler/discord-562286213059444737=lunarclient.desktop
-x-scheme-handler/http=firefox.desktop;
-x-scheme-handler/https=firefox.desktop;
+x-scheme-handler/http=mullvad-browser.desktop;
+x-scheme-handler/https=mullvad-browser.desktop;
 x-scheme-handler/lunarclient=lunarclient.desktop
 x-scheme-handler/ror2mm=r2modman.desktop
+x-scheme-handler/freetube=freetube.desktop
+x-scheme-handler/moosync=moosync.desktop

@@ -1,3 +1,4 @@
+vim.cmd("set number")
 vim.cmd("set relativenumber")
 vim.cmd("set splitright") -- When doing :vsplit split always to the right
 vim.cmd("color catppuccin-mocha")
