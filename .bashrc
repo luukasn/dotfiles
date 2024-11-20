@@ -8,6 +8,9 @@
 # Add directories to PATH:
 export PATH="$PATH:$HOME/.local/bin"
 
+# Set neovim as the man pager
+export MANPAGER="nvim +Man!"
+
 # Load API keys:
 if [ -f "$HOME/dotfiles/keys/OPENAI_API_KEY" ]; then
     export "OPENAI_API_KEY=$(cat $HOME/dotfiles/keys/OPENAI_API_KEY)"
