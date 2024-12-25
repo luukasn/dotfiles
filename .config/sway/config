@@ -245,6 +245,6 @@ client.unfocused "#737994" "#737994" "#ffffff"
 
 exec waybar
 exec swaync
-exec swaybg --mode center --image ~/.cache/current_wallpaper.png 
+exec swaybg --mode fill --image ~/.cache/current_wallpaper.png 
 
 include /etc/sway/config.d/*
