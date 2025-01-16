@@ -72,7 +72,7 @@ detect_package_manager() {
 }
 
 update_system() {
-    inf "updating the system..."
+    inf "updating the system, this could take a while..."
     if sudo pacman -Syu --noconfirm 1> /dev/null 2>> install_errors.log ; then
         success "system updated!"
     else 
